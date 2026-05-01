@@ -8,6 +8,13 @@ It is not an application skeleton.
 
 It is a structured base for spec-driven delivery.
 
+## Available Versions
+
+* English README: `README.md`
+* Spanish README: `README.es.md`
+* English example: `EXAMPLE.md`
+* Spanish example: `EXAMPLE.es.md`
+
 ## Purpose
 
 The goal is to help teams start from understanding before implementation.
@@ -66,6 +73,8 @@ The process documents remain useful even if the stack evolves.
 ## Suggested Starting Points
 
 * `EXAMPLE.md`
+* `EXAMPLE.es.md`
+* `README.es.md`
 * `AGENTS.md`
 * `docs/prd/0000-product-development-principles.md`
 * `docs/adr/0001-architecture-style.md`
