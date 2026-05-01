@@ -6,7 +6,7 @@ Define the mandatory process for fixing bugs without introducing hidden regressi
 
 Bug fixing must prioritize understanding over speed.
 
-Fast incorrect fixes create recurring incidents.
+Fast incorrect fixes create recurring failures.
 
 ---
 
@@ -73,9 +73,9 @@ Using trunk-based development:
 
 Examples:
 
-* `fix/shift-overlap-validation`
-* `fix/incident-history-loss`
-* `hotfix/vehicle-status-sync`
+* `fix/duplicate-registration-validation`
+* `fix/report-history-loss`
+* `hotfix/session-timeout-sync`
 
 Scope must remain narrow and explicit.
 

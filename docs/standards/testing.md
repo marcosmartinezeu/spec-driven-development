@@ -147,12 +147,12 @@ Rules:
 
 Good:
 
-* it_prevents_overlapping_guard_assignments
-* it_marks_vehicle_as_unavailable_after_maintenance_failure
+* it_prevents_duplicate_user_registration
+* it_marks_a_subscription_as_expired_after_its_end_date
 
 Bad:
 
-* test_guard
+* test_registration
 * should_work
 * validation_test
 

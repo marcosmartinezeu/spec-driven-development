@@ -124,7 +124,7 @@ Bugfixes require:
 
 Never patch symptoms only.
 
-Fast wrong fixes create repeated incidents.
+Fast wrong fixes create repeated failures.
 
 ---
 

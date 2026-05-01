@@ -159,10 +159,10 @@ Each context must have:
 
 Examples:
 
-* Personnel Management
-* Incident Management
-* Vehicle Operations
-* Equipment Control
+* Identity and Access
+* Billing
+* Reporting
+* Notifications
 
 Do not create fake shared ownership.
 

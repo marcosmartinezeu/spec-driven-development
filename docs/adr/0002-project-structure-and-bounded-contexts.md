@@ -8,12 +8,12 @@ Accepted
 
 ## Context
 
-The project requires long-term maintainability, explicit domain ownership, and safe evolution across multiple operational areas of the fire station management platform.
+The project requires long-term maintainability, explicit domain ownership, and safe evolution across multiple business capabilities.
 
 Using the default framework-first structure such as:
 
 * Controller
-  n- Entity
+* Entity
 * Repository
 * Service
 
@@ -38,15 +38,15 @@ The project will use a business-oriented structure based on bounded contexts and
 
 Symfony remains the application framework, but the internal code organization will be domain-first.
 
+The concrete bounded contexts depend on the product domain and must be defined intentionally.
+
 The project structure will be:
 
 ```txt
 src/
 ├── Shared/
-├── Personnel/
-├── Incidents/
-├── Vehicles/
-├── Equipment/
+├── <BoundedContextA>/
+├── <BoundedContextB>/
 └── Infrastructure/
 ```
 
@@ -58,7 +58,7 @@ Framework folders are not the primary architecture.
 
 ## Bounded Contexts
 
-## Shared
+### Shared
 
 Responsible for:
 
@@ -77,61 +77,19 @@ Shared exists to reduce duplication, not to hide design problems.
 
 ---
 
-## Personnel
+### Business Contexts
 
-Responsible for:
+Each bounded context is responsible for one cohesive business capability.
 
-* firefighter profiles
-* shift planning
-* guard assignments
-* availability
-* absence control
-* operational assignments
+Rules:
 
-This context is critical because it affects most operational workflows.
+* own its own ubiquitous language
+* protect its own invariants
+* expose explicit integration boundaries
+* avoid hidden cross-context dependencies
+* evolve independently when possible
 
----
-
-## Incidents
-
-Responsible for:
-
-* incident registration
-* intervention tracking
-* operational traceability
-* assigned teams
-* involved resources
-* intervention history
-
-This context protects operational reliability.
-
----
-
-## Vehicles
-
-Responsible for:
-
-* vehicle registry
-* operational status
-* maintenance state
-* service availability
-* assignment tracking
-
-Vehicle readiness must remain explicit and auditable.
-
----
-
-## Equipment
-
-Responsible for:
-
-* equipment inventory
-* readiness state
-* maintenance control
-* assignment tracking
-* critical material availability
-
-Operational readiness depends heavily on this context.
+Concrete context names must come from the product domain, not from technical convenience.
 
 ---
 
@@ -150,7 +108,7 @@ Context/
 Example:
 
 ```txt
-Personnel/
+<BoundedContextName>/
 ├── Domain/
 ├── Application/
 ├── Infrastructure/
@@ -241,7 +199,7 @@ This ADR must be reviewed when:
 
 * a new bounded context is introduced
 * context ownership becomes unclear
-* operational scope changes significantly
+* product scope changes significantly
 * a major architecture simplification or split is proposed
 
 Context boundaries must evolve intentionally, never accidentally.

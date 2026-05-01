@@ -40,10 +40,10 @@ Allowed branches:
 
 Examples:
 
-* `feature/guard-assignment`
-* `feature/incident-registration`
-* `fix/vehicle-maintenance-status`
-* `hotfix/shift-availability-bug`
+* `feature/user-registration`
+* `feature/report-export`
+* `fix/email-delivery-status`
+* `hotfix/session-timeout-bug`
 
 Rules:
 
@@ -74,9 +74,9 @@ Commits must:
 
 Good examples:
 
-* `Add shift overlap validation`
-* `Prevent invalid guard assignment`
-* `Fix vehicle maintenance status sync`
+* `Add user registration validation`
+* `Prevent duplicate email registration`
+* `Fix session expiration handling`
 
 Bad examples:
 

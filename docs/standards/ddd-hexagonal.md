@@ -150,10 +150,10 @@ Use Value Objects when behavior and meaning matter.
 
 Examples:
 
-* ShiftPeriod
-* VehicleStatus
-* EquipmentCondition
-* GuardAssignment
+* EmailAddress
+* DateRange
+* Money
+* OrderStatus
 
 Avoid primitive obsession.
 
@@ -187,10 +187,10 @@ Avoid shared ambiguity.
 
 Examples for this project may include:
 
-* Personnel Management
-* Incident Management
-* Vehicle Operations
-* Equipment Control
+* Identity and Access
+* Billing
+* Reporting
+* Notifications
 
 Context boundaries reduce accidental complexity.
 

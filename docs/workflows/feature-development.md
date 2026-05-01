@@ -87,9 +87,9 @@ Using trunk-based development:
 
 Examples:
 
-* `feature/shift-assignment`
-* `feature/incident-registration`
-* `fix/vehicle-maintenance-status`
+* `feature/user-registration`
+* `feature/report-export`
+* `fix/email-delivery-status`
 
 Long-lived branches are forbidden.
 

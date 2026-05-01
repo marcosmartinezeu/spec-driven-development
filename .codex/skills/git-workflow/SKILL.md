@@ -58,10 +58,10 @@ Allowed branches:
 
 Examples:
 
-* `feature/guard-assignment`
-* `feature/incident-registration`
-* `fix/equipment-status-sync`
-* `hotfix/shift-rotation-failure`
+* `feature/user-registration`
+* `feature/report-export`
+* `fix/email-delivery-status`
+* `hotfix/session-timeout-failure`
 
 Rules:
 
@@ -85,9 +85,9 @@ Required:
 
 Good examples:
 
-* `Add guard overlap validation`
-* `Prevent invalid vehicle assignment`
-* `Fix incident history persistence`
+* `Add user registration validation`
+* `Prevent duplicate email registration`
+* `Fix report history persistence`
 
 Bad examples:
 
