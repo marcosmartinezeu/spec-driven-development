@@ -119,6 +119,8 @@ Laravel and Symfony are delivery tools.
 
 Rules:
 
+* derived projects declare one active primary framework in `docs/project/active-stack.md`
+* implementation follows the declared active stack
 * framework code stays outside Domain
 * framework models do not define business truth
 * avoid framework-first architecture decisions

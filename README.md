@@ -28,6 +28,7 @@ The repository is designed to make these questions explicit:
 * `docs/standards/` for development standards, including Definition of Ready and Definition of Done
 * `docs/workflows/` for feature, bugfix, and review workflows
 * `.codex/skills/` for reusable skills
+* `.codex/examples/` for concrete derived-project examples
 * `.codex/templates/` for project-specific skill templates
 * `.opencode/agent/` for agent roles and responsibilities
 * `AGENTS.md` as the project orchestration guide
@@ -72,6 +73,7 @@ The process documents remain useful even if the stack evolves.
 * `docs/standards/definition-of-ready.md`
 * `docs/standards/definition-of-done.md`
 * `docs/workflows/feature-development.md`
+* `docs/workflows/derived-project-setup.md`
 
 ## Derived Project Setup
 
@@ -79,9 +81,11 @@ When creating a project from this base:
 
 1. Fill `docs/project/active-stack.md` with the actual stack.
 2. Keep only one primary PHP framework active.
-3. Copy `.codex/templates/skills/project-conventions/SKILL.md` into the derived project if real repeated conventions appear.
-4. Rename that skill explicitly, for example `laravel-project-conventions` or `symfony-project-conventions`.
-5. Use project-specific conventions to narrow defaults, not to override architecture rules.
+3. Review `docs/workflows/derived-project-setup.md`.
+4. Copy `.codex/templates/skills/project-conventions/SKILL.md` into the derived project if real repeated conventions appear.
+5. Use `.codex/examples/skills/laravel-project-conventions/SKILL.md` or `.codex/examples/skills/symfony-project-conventions/SKILL.md` as adaptation references.
+6. Rename that skill explicitly, for example `laravel-project-conventions` or `symfony-project-conventions`.
+7. Use project-specific conventions to narrow defaults, not to override architecture rules.
 
 ## Customization Guidance
 

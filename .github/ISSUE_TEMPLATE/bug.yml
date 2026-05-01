@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a bug with enough detail to identify root cause and regression risk
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: failing_behavior
+    attributes:
+      label: Failing behavior
+      description: What is happening and what should happen instead?
+      placeholder: Describe the exact failure.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which users or workflows are affected?
+      placeholder: Describe business impact and severity.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: How can the issue be reproduced reliably?
+      placeholder: List the steps, environment, and conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: suspected_scope
+    attributes:
+      label: Suspected scope and stack notes
+      description: Which bounded context, interface, infrastructure area, or active stack choice may be involved?
+      placeholder: Mention suspected layers, contexts, ADRs, or stack-related concerns.
+    validations:
+      required: true
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression protection
+      description: What behavior should be protected after the fix?
+      placeholder: Describe the regression test or validation expected.
+    validations:
+      required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Bugfix readiness
+      options:
+        - label: The failing behavior is reproducible
+        - label: The affected workflow is known
+        - label: Root cause is not assumed blindly
+        - label: Active stack constraints are known
+        - label: Regression risk is visible

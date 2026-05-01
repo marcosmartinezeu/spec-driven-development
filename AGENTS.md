@@ -55,6 +55,8 @@ Before implementing any feature, agents must consult:
 4. `docs/standards/` → Development standards and coding conventions
 5. `docs/workflows/` → Delivery process definitions
 
+For derived projects, `docs/project/active-stack.md` must remove framework ambiguity before implementation starts.
+
 Implementation must align with these documents.
 
 ---

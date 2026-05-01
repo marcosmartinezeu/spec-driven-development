@@ -39,6 +39,7 @@ Implementation without product alignment is incomplete.
 Before considering work complete, verify:
 
 * existing ADRs are respected
+* `docs/project/active-stack.md` is respected when relevant
 * architecture boundaries are preserved
 * Domain remains protected from framework and infrastructure concerns
 * no architecture decision was introduced silently
@@ -124,6 +125,7 @@ Before considering work complete, verify:
 
 * PRDs are updated if product behavior changed
 * ADRs are updated or created if architecture changed
+* `docs/project/active-stack.md` is updated if the effective stack changed
 * standards are updated if development rules changed
 * README is updated if setup or usage changed
 
@@ -151,6 +153,7 @@ Operational uncertainty means the work is not done.
 A work item is done only when:
 
 * product intent is satisfied
+* active stack is respected when relevant
 * architecture is respected
 * code quality is acceptable
 * tests pass

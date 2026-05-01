@@ -27,6 +27,7 @@ Before reviewing, check the relevant sources of truth:
 
 * `docs/prd/` for product intent
 * `docs/adr/` for architecture decisions
+* `docs/project/` for active stack constraints
 * `docs/standards/` for development standards
 * `docs/workflows/` for delivery process
 
@@ -52,6 +53,7 @@ If the purpose is unclear, request clarification before reviewing implementation
 
 Check:
 
+* the active stack is respected
 * Domain remains framework-independent
 * controllers are thin
 * Application layer orchestrates use cases
@@ -192,6 +194,7 @@ Examples:
 A PR can be approved only when:
 
 * product intent is clear
+* active stack is respected
 * architecture is respected
 * domain remains protected
 * tests are adequate

@@ -1,0 +1,64 @@
+name: Feature request
+description: Propose a feature with enough detail to evaluate readiness before implementation
+title: "feature: "
+labels:
+  - feature
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem should this feature solve?
+      placeholder: Describe the user or business problem clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: users
+    attributes:
+      label: Users and business value
+      description: Who benefits and why does this matter now?
+      placeholder: Describe the primary user and the expected business value.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What should be included and what is explicitly out of scope?
+      placeholder: Keep scope intentionally small and explicit.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What observable outcomes define completion?
+      placeholder: List the expected outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: architecture
+    attributes:
+      label: Architecture and active stack notes
+      description: Which bounded context, ADRs, or stack decisions matter?
+      placeholder: Mention relevant ADRs, bounded contexts, or active stack constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing expectations
+      description: What behavior needs protection?
+      placeholder: Domain, application, functional, or regression expectations.
+    validations:
+      required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Definition of Ready
+      options:
+        - label: The user problem is clear
+        - label: Acceptance criteria exist
+        - label: Scope is intentionally small
+        - label: Active stack constraints are known
+        - label: Open questions are visible

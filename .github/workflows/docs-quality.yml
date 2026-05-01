@@ -1,0 +1,59 @@
+name: Docs Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate required files
+        run: |
+          set -euo pipefail
+          required_files=(
+            "AGENTS.md"
+            "README.md"
+            "docs/prd/TEMPLATE.md"
+            "docs/adr/TEMPLATE.md"
+            "docs/project/active-stack.md"
+            "docs/standards/definition-of-ready.md"
+            "docs/standards/definition-of-done.md"
+            "docs/workflows/feature-development.md"
+            "docs/workflows/bugfix.md"
+            "docs/workflows/code-review.md"
+            "docs/workflows/derived-project-setup.md"
+            ".github/PULL_REQUEST_TEMPLATE.md"
+            ".github/ISSUE_TEMPLATE/feature.yml"
+            ".github/ISSUE_TEMPLATE/bug.yml"
+            ".github/ISSUE_TEMPLATE/config.yml"
+            ".codex/templates/skills/project-conventions/SKILL.md"
+            ".codex/examples/skills/laravel-project-conventions/SKILL.md"
+            ".codex/examples/skills/symfony-project-conventions/SKILL.md"
+          )
+
+          for file in "${required_files[@]}"; do
+            test -f "$file"
+          done
+
+      - name: Validate active stack integration
+        run: |
+          set -euo pipefail
+          grep -q 'docs/project/active-stack.md' AGENTS.md
+          grep -q 'docs/project/active-stack.md' README.md
+          grep -q 'docs/project/active-stack.md' docs/workflows/feature-development.md
+          grep -q 'docs/project/active-stack.md' docs/workflows/bugfix.md
+          grep -q 'docs/project/active-stack.md' docs/workflows/code-review.md
+          grep -q 'docs/project/active-stack.md' docs/standards/definition-of-ready.md
+          grep -q 'docs/project/active-stack.md' docs/standards/definition-of-done.md
+          grep -q 'docs/project/active-stack.md' docs/standards/php.md
+
+      - name: Validate skill naming drift
+        run: |
+          set -euo pipefail
+          ! grep -R "dashboard-ui" . --include='*.md'
+          ! grep -R "php-frameworks" . --include='*.md'
