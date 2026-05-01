@@ -17,6 +17,7 @@ Use this skill for:
 * starting new features
 * evaluating bugfix scope
 * deciding if an ADR is required
+* checking active stack alignment
 * validating PRD alignment
 * preparing pull requests
 * checking Definition of Ready
@@ -36,7 +37,7 @@ Work starts from understanding.
 
 The mandatory order is:
 
-PRD → ADR → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
+PRD → ADR → Active Stack → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
 
 Never the opposite.
 
@@ -73,6 +74,19 @@ Before architecture decisions, validate:
 If the decision changes architecture, it requires explicit ADR review.
 
 Architecture must never change silently.
+
+---
+
+## Active Stack Rule
+
+Before implementation, validate:
+
+* the derived project has one active primary framework
+* `docs/project/active-stack.md` is current
+* framework-specific decisions follow that declaration
+* introducing another primary framework is treated as an architectural decision
+
+Generic framework support does not justify mixed stack behavior inside one project.
 
 ---
 
@@ -181,6 +195,7 @@ Before implementation, ask:
 * is the user problem clear
 * is the PRD complete enough
 * does architecture require ADR review
+* is the active stack declared
 * is scope small enough
 * are tests planned
 * is rollback safe
@@ -192,6 +207,7 @@ If unclear, stop before coding.
 ## Forbidden
 
 * coding before understanding
+* ignoring the active stack declaration
 * starting implementation without readiness
 * architecture changes without ADR
 * large speculative implementations

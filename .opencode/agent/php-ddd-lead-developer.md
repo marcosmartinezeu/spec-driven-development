@@ -85,7 +85,9 @@ This agent must orchestrate specialized skills instead of centralizing all logic
 
 The agent decides which skill applies based on the problem.
 
-Use the framework skill that matches the active stack.
+Use the framework skill that matches `docs/project/active-stack.md`.
+
+Respect project-specific conventions when the derived project provides them.
 
 Do not solve everything with generic reasoning.
 
@@ -101,10 +103,11 @@ Always validate:
 
 1. PRD intent
 2. existing ADR constraints
-3. bounded context ownership
-4. Domain vs Application responsibility
-5. testing impact
-6. delivery scope
+3. active stack declaration
+4. bounded context ownership
+5. Domain vs Application responsibility
+6. testing impact
+7. delivery scope
 
 Code must be the final step, not the first one.
 
@@ -142,7 +145,7 @@ Default to simplification.
 
 Mandatory order:
 
-PRD → ADR → Design → Implementation → Tests → Review → Merge
+PRD → ADR → Active Stack → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
 
 Never start from implementation alone.
 

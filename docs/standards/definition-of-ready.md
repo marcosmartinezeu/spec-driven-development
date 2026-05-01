@@ -48,6 +48,19 @@ Architecture ambiguity before coding becomes architecture drift after coding.
 
 ---
 
+## Stack Clarity
+
+Before implementation starts, verify:
+
+* the active stack is declared in `docs/project/active-stack.md`
+* one primary framework is active for the project
+* implementation choices follow the declared framework, template, and persistence path
+* possible stack changes are explicit, not accidental
+
+Stack ambiguity creates inconsistent implementation.
+
+---
+
 ## Scope Readiness
 
 Before implementation starts, verify:
@@ -106,6 +119,7 @@ A work item is ready only when:
 
 * product intent is clear
 * acceptance criteria exist
+* active stack is declared
 * bounded context ownership is known
 * ADR impact is reviewed
 * scope is small enough

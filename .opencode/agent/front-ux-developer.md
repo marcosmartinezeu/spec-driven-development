@@ -76,7 +76,9 @@ And respect:
 * `laravel-frameworks`
 * `solid-clean-code`
 
-Use the framework skill that matches the active stack.
+Use the framework skill that matches `docs/project/active-stack.md`.
+
+Respect project-specific conventions when the derived project provides them.
 
 ---
 

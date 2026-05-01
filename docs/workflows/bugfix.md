@@ -45,6 +45,7 @@ Validate:
 
 * where the failure originates
 * if the issue is domain, application, infrastructure, or interface related
+* if the intended fix follows `docs/project/active-stack.md`
 * if the problem is caused by data inconsistency
 * if the issue reveals an architecture flaw
 * if an ADR should be reviewed
@@ -155,6 +156,7 @@ Before merge:
 
 * issue reproduced
 * root cause identified
+* active stack respected
 * architecture impact reviewed
 * regression tests added
 * PR reviewed

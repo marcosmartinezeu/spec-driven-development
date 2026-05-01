@@ -18,7 +18,7 @@ Every feature starts from product understanding.
 
 The correct order is:
 
-PRD → ADR → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
+PRD → ADR → Active Stack → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
 
 Never the opposite.
 
@@ -28,6 +28,7 @@ Never the opposite.
 
 Before implementation starts, the work must satisfy:
 
+* `docs/project/active-stack.md`
 * `docs/standards/definition-of-ready.md`
 
 If readiness is weak, implementation should pause.
@@ -72,7 +73,20 @@ Source of truth:
 
 ---
 
-## Step 3 — Define Implementation Approach
+## Step 3 — Confirm Active Stack
+
+Before implementation, verify:
+
+* one primary framework is active for the project
+* the selected framework is declared in `docs/project/active-stack.md`
+* interface, persistence, and testing choices match that declaration
+* new stack changes are raised explicitly instead of introduced silently
+
+Implementation should follow the active stack before using generic defaults.
+
+---
+
+## Step 4 — Define Implementation Approach
 
 Prepare:
 
@@ -89,7 +103,7 @@ The objective is clarity, not premature detail.
 
 ---
 
-## Step 4 — Create Short-Lived Branch
+## Step 5 — Create Short-Lived Branch
 
 Using trunk-based development:
 
@@ -107,7 +121,7 @@ Long-lived branches are forbidden.
 
 ---
 
-## Step 5 — Implement Incrementally
+## Step 6 — Implement Incrementally
 
 Rules:
 
@@ -122,7 +136,7 @@ Large feature branches indicate bad scope definition.
 
 ---
 
-## Step 6 — Add or Update Tests
+## Step 7 — Add or Update Tests
 
 Required validation includes:
 
@@ -135,7 +149,7 @@ Tests are part of delivery, not optional polish.
 
 ---
 
-## Step 7 — Self Review
+## Step 8 — Self Review
 
 Before opening PR:
 
@@ -152,7 +166,7 @@ Review before asking for review.
 
 ---
 
-## Step 8 — Pull Request
+## Step 9 — Pull Request
 
 Rules:
 
@@ -166,7 +180,7 @@ Bad PRs create bad architecture.
 
 ---
 
-## Step 9 — Merge to Main
+## Step 10 — Merge to Main
 
 Rules:
 
@@ -185,6 +199,7 @@ Before merge:
 
 * PRD validated
 * ADR reviewed
+* active stack validated
 * architecture respected
 * tests passing
 * PR reviewed

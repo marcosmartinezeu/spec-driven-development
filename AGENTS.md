@@ -51,8 +51,9 @@ Before implementing any feature, agents must consult:
 
 1. `docs/prd/` → Product requirements and business intent
 2. `docs/adr/` → Architecture decisions and technical constraints
-3. `docs/standards/` → Development standards and coding conventions
-4. `docs/workflows/` → Delivery process definitions
+3. `docs/project/` → Active stack and project operating constraints
+4. `docs/standards/` → Development standards and coding conventions
+5. `docs/workflows/` → Delivery process definitions
 
 Implementation must align with these documents.
 
@@ -169,6 +170,7 @@ Used for:
 
 * Put business rules inside controllers
 * Couple domain logic to Laravel or Symfony directly
+* Mix multiple primary PHP frameworks in one derived project without explicit ADR review
 * Skip ADRs for important architectural decisions
 * Introduce infrastructure concerns inside Domain
 * Create large unreviewable pull requests
@@ -178,6 +180,7 @@ Used for:
 
 * Protect the Domain first
 * Prefer explicitness over magic
+* Respect `docs/project/active-stack.md`
 * Write code for future maintainers
 * Validate architecture before implementation
 * Keep documentation updated when decisions change
@@ -188,14 +191,15 @@ Used for:
 
 1. Read PRD
 2. Review existing ADRs
-3. Confirm Definition of Ready
-4. Identify affected bounded context
-5. Propose implementation approach
-6. Validate architecture constraints
-7. Implement incrementally
-8. Add or update tests
-9. Prepare small PR
-10. Update ADR/PRD if required
+3. Confirm active stack
+4. Confirm Definition of Ready
+5. Identify affected bounded context
+6. Propose implementation approach
+7. Validate architecture constraints
+8. Implement incrementally
+9. Add or update tests
+10. Prepare small PR
+11. Update ADR/PRD if required
 
 This order must be preserved unless there is strong justification to change it.
 
