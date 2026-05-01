@@ -1,12 +1,12 @@
-# Skill — php-frameworks
+# Skill — symfony-frameworks
 
 ## Purpose
 
-Apply Laravel and Symfony as delivery tools without allowing framework decisions to dominate architecture.
+Apply Symfony as a delivery tool without allowing framework decisions to dominate architecture.
 
-This skill ensures the framework supports the Domain instead of becoming the center of the system.
+This skill ensures Symfony supports the Domain instead of becoming the center of the system.
 
-The objective is framework productivity without framework dependency.
+The objective is Symfony productivity without Symfony dependency.
 
 ---
 
@@ -14,27 +14,26 @@ The objective is framework productivity without framework dependency.
 
 Use this skill for:
 
-* integrating Domain with Laravel or Symfony
+* integrating Domain with Symfony
 * designing controllers and HTTP entry points
-* configuring dependency injection
-* implementing commands and handlers
-* using events responsibly
-* persistence strategy decisions
-* validation boundaries
-* infrastructure adapters
-* framework migration decisions
+* configuring dependency injection and service wiring
+* implementing console commands and handlers
+* using Messenger or events responsibly
+* defining validation boundaries
+* designing Doctrine-backed adapters
+* making Symfony-specific implementation decisions
 
-If the question is "how should the framework support this?", this skill should be used.
+If the question is "how should Symfony support this?", this skill should be used.
 
 ---
 
 ## Core Rule
 
-Laravel and Symfony are delivery mechanisms.
+Symfony is a delivery mechanism.
 
-They are not the architecture.
+It is not the architecture.
 
-The Domain must remain valid even if the framework changes.
+The Domain must remain valid even if Symfony is replaced.
 
 Framework convenience must never justify domain pollution.
 
@@ -85,14 +84,14 @@ Dependencies must be obvious.
 
 ## Persistence Rule
 
-ORM is Infrastructure.
+Doctrine is Infrastructure.
 
 Rules:
 
 * repository contracts belong to Domain
 * implementations belong to Infrastructure
-* persistence models must not define business truth
-* avoid ORM-first domain modeling
+* Doctrine models must not define business truth
+* avoid Doctrine-first domain modeling
 
 Do not design aggregates from tables.
 
@@ -106,7 +105,7 @@ Validation has two layers.
 
 ### Interface Validation
 
-Use framework validation for:
+Use Symfony validation for:
 
 * request shape
 * required fields
@@ -125,42 +124,24 @@ Framework validation is not business validation.
 
 ---
 
-## Events Rule
+## Events and Messenger Rule
 
-Use events intentionally.
+Use events and Messenger intentionally.
 
 Good use cases:
 
 * domain events
 * integration boundaries
 * async side effects
-* decoupled operational reactions
+* decoupled technical reactions
 
 Forbidden:
 
 * hiding business flow inside listeners
 * invisible domain behavior
-* debugging through event chaos
+* debugging through handler sprawl
 
-If behavior becomes hard to trace, event usage is wrong.
-
----
-
-## Commands and Handlers
-
-Use commands for:
-
-* explicit use case execution
-* clear application boundaries
-* orchestration clarity
-
-Handlers should:
-
-* coordinate flow
-* call Domain behavior
-* remain focused and small
-
-Do not turn handlers into god classes.
+If behavior becomes hard to trace, usage is wrong.
 
 ---
 
@@ -179,38 +160,26 @@ Explicit architecture beats magical resolution.
 
 ---
 
-## Framework Upgrade Rule
-
-Before adopting framework features, ask:
-
-* does this improve delivery or only novelty
-* does this increase coupling
-* would the Domain survive replacement
-
-Framework upgrades must improve maintainability, not dependency.
-
----
-
 ## Review Questions
 
 Before implementation, ask:
 
 * is the Domain protected
-* is framework logic leaking into business rules
+* is Symfony logic leaking into business rules
 * does the controller remain thin
-* is persistence driving the model
+* is Doctrine driving the model
 * is validation in the correct layer
 * is dependency injection explicit
 
-If the framework is shaping the Domain, redesign first.
+If Symfony is shaping the Domain, redesign first.
 
 ---
 
 ## Forbidden
 
 * fat controllers
-* ORM-driven domain design
-* framework annotations inside Domain
+* Doctrine-driven domain design
+* framework annotations or attributes inside Domain when they define business truth
 * hidden business rules in listeners
 * container access inside Domain
 * generic service classes replacing real use cases
@@ -228,7 +197,7 @@ This skill should produce:
 * explicit use cases
 * protected Domain boundaries
 * Infrastructure isolated from business truth
-* framework productivity without architectural dependency
+* Symfony productivity without architectural dependency
 * safe future migration paths
 
-The framework should accelerate delivery, not own the system.
+Symfony should accelerate delivery, not own the system.

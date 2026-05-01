@@ -77,12 +77,15 @@ This agent must orchestrate specialized skills instead of centralizing all logic
 ### Use:
 
 * `ddd-hexagonal`
-* `php-frameworks`
+* `symfony-frameworks`
+* `laravel-frameworks`
 * `solid-clean-code`
 * `git-workflow`
 * `delivery-process`
 
 The agent decides which skill applies based on the problem.
+
+Use the framework skill that matches the active stack.
 
 Do not solve everything with generic reasoning.
 

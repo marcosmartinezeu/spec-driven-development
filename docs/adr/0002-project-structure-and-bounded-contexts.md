@@ -36,7 +36,7 @@ A bounded-context-first structure is required.
 
 The project will use a business-oriented structure based on bounded contexts and DDD principles.
 
-Symfony remains the application framework, but the internal code organization will be domain-first.
+The selected PHP framework remains a delivery mechanism, but the internal code organization will be domain-first.
 
 The concrete bounded contexts depend on the product domain and must be defined intentionally.
 
@@ -121,13 +121,19 @@ This preserves Hexagonal Architecture inside each context.
 
 ## Framework Rule
 
-Symfony lives at project level:
+Framework-level files live at project level.
+
+Examples:
 
 * config/
 * public/
 * bin/
 * vendor/
-* console
+* bootstrap/
+* artisan
+* bin/console
+
+Actual directories depend on the selected framework.
 
 But business code must remain inside bounded contexts.
 
@@ -137,7 +143,7 @@ Forbidden:
 * global service folders for business logic
 * framework entities defining domain truth
 
-Symfony supports delivery.
+The framework supports delivery.
 
 It does not define architecture.
 

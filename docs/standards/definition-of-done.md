@@ -91,8 +91,8 @@ A change without adequate verification is not done.
 For user-facing work, verify:
 
 * the interface is usable
-* the layout is consistent with the dashboard style
-* Flowbite is used when suitable
+* the layout is consistent with the product UI patterns
+* the existing component library or design system is used when suitable
 * forms have clear labels and error states
 * navigation is predictable
 * responsive behavior is acceptable

@@ -91,18 +91,41 @@ Used for:
 * Invariants
 * Bounded Contexts
 
-### php-frameworks
+### symfony-frameworks
 
 Used for:
 
 * Symfony
+* Dependency Injection
+* Commands and Handlers
+* Events
+* Validation
+* Doctrine and persistence adapters
+* Framework integration without domain pollution
+
+### laravel-frameworks
+
+Used for:
+
 * Laravel
 * Dependency Injection
 * Commands and Handlers
 * Events
 * Validation
-* Persistence strategies
+* Eloquent and persistence adapters
 * Framework integration without domain pollution
+
+### server-rendered-ui
+
+Used for:
+
+* Twig or Blade templates
+* layouts and navigation
+* forms and user flows
+* component composition
+* responsive UI
+* accessibility basics
+* design-system consistency
 
 ### solid-clean-code
 
@@ -135,6 +158,7 @@ Used for:
 * Feature workflow
 * Bugfix workflow
 * Release workflow
+* Definition of Ready
 * Definition of Done
 
 ---
@@ -164,13 +188,14 @@ Used for:
 
 1. Read PRD
 2. Review existing ADRs
-3. Identify affected bounded context
-4. Propose implementation approach
-5. Validate architecture constraints
-6. Implement incrementally
-7. Add or update tests
-8. Prepare small PR
-9. Update ADR/PRD if required
+3. Confirm Definition of Ready
+4. Identify affected bounded context
+5. Propose implementation approach
+6. Validate architecture constraints
+7. Implement incrementally
+8. Add or update tests
+9. Prepare small PR
+10. Update ADR/PRD if required
 
 This order must be preserved unless there is strong justification to change it.
 
@@ -198,10 +223,10 @@ The main agent must delegate UI and UX-related tasks to:
 Delegation must happen when:
 
 - a user interface is required
-- Twig templates are needed
+- server-rendered templates are needed
 - forms and layouts must be created
 - usability and interaction design are involved
-- Flowbite or Tailwind components are used
+- a component library, design system, or shared UI components are used
 
 The frontend agent:
 

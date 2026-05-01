@@ -18,9 +18,19 @@ Every feature starts from product understanding.
 
 The correct order is:
 
-PRD → ADR → Design → Implementation → Tests → Review → Merge
+PRD → ADR → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
 
 Never the opposite.
+
+---
+
+## Readiness Gate
+
+Before implementation starts, the work must satisfy:
+
+* `docs/standards/definition-of-ready.md`
+
+If readiness is weak, implementation should pause.
 
 ---
 
@@ -39,6 +49,7 @@ If no clear user exists, the feature should not start.
 Source of truth:
 
 * `docs/prd/`
+* `docs/prd/TEMPLATE.md` when a new PRD is needed
 
 ---
 
@@ -57,6 +68,7 @@ Never implement architecture decisions silently.
 Source of truth:
 
 * `docs/adr/`
+* `docs/adr/TEMPLATE.md` when a new ADR is needed
 
 ---
 

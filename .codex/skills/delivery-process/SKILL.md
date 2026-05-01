@@ -19,6 +19,7 @@ Use this skill for:
 * deciding if an ADR is required
 * validating PRD alignment
 * preparing pull requests
+* checking Definition of Ready
 * checking Definition of Done
 * release preparation
 * preventing undocumented architecture decisions
@@ -35,7 +36,7 @@ Work starts from understanding.
 
 The mandatory order is:
 
-PRD → ADR → Design → Implementation → Tests → Review → Merge
+PRD → ADR → Definition of Ready → Design → Implementation → Tests → Review → Merge → Definition of Done
 
 Never the opposite.
 
@@ -93,6 +94,21 @@ Forbidden:
 * unrelated mixed implementations
 
 Small safe delivery beats large risky delivery.
+
+---
+
+## Definition of Ready Rule
+
+Work is ready to start only when:
+
+* the user problem is clear
+* scope is intentionally small
+* acceptance criteria are visible
+* architecture constraints are understood
+* dependencies and open questions are known
+* testing strategy is identified
+
+Starting implementation before readiness creates preventable rework.
 
 ---
 
@@ -176,6 +192,7 @@ If unclear, stop before coding.
 ## Forbidden
 
 * coding before understanding
+* starting implementation without readiness
 * architecture changes without ADR
 * large speculative implementations
 * undocumented hotfixes

@@ -1,8 +1,8 @@
-# Skill — dashboard-ui
+# Skill — server-rendered-ui
 
 ## Purpose
 
-Design and implement a clean, usable, and consistent dashboard-style user interface using Tailwind CSS and Flowbite.
+Design and implement a clean, usable, and consistent user interface using server-rendered templates, a styling system, and reusable UI components.
 
 This skill ensures that the UI is not only visually consistent but also usable, accessible, and aligned with real user workflows.
 
@@ -14,11 +14,11 @@ The objective is clarity and usability, not visual complexity.
 
 Use this skill for:
 
-* designing layouts (dashboard, sidebar, navbar)
+* designing layouts (application shell, sidebar, navbar)
 * building forms and user flows
-* creating Twig templates
-* applying Tailwind CSS
-* using Flowbite components
+* creating Twig or Blade templates
+* applying the project styling system
+* using an existing component library or shared UI components
 * improving UX
 * ensuring responsive design
 * improving accessibility
@@ -46,10 +46,10 @@ Avoid:
 
 Use:
 
-* Twig for templates
-* Tailwind CSS for styling
-* Flowbite for components
-* minimal JavaScript (vanilla or Flowbite JS)
+* Twig or Blade for server-rendered templates
+* the project styling system or CSS framework
+* an existing component library when available
+* minimal JavaScript (vanilla or project-level UI scripts)
 
 Avoid:
 
@@ -109,7 +109,7 @@ The UI must work on:
 * tablet
 * mobile
 
-Use Tailwind responsive utilities.
+Use the project's responsive layout conventions.
 
 Mobile usability is required, not optional.
 
@@ -155,11 +155,11 @@ Avoid duplication in templates.
 
 This skill should produce:
 
-* clean dashboard UI
+* clean application UI
 * consistent layouts
 * usable forms
 * responsive pages
 * clear user flows
-* maintainable Twig templates
+* maintainable server-rendered templates
 
 The UI should feel simple, predictable, and professional.
