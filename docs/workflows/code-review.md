@@ -27,7 +27,7 @@ Before reviewing, check the relevant sources of truth:
 
 * `docs/prd/` for product intent
 * `docs/adr/` for architecture decisions
-* `docs/project/` for active stack constraints
+* `docs/project/active-stack.md` for active stack constraints
 * `docs/standards/` for development standards
 * `docs/workflows/` for delivery process
 
